@@ -1,0 +1,24 @@
+<h1>Editing sass</h1>
+
+<% form_for(@sass) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_field :text %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :age %><br />
+    <%= f.text_field :age %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @sass %> |
+<%= link_to 'Back', sasses_path %>

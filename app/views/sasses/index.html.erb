@@ -1,0 +1,24 @@
+<h1>Listing sasses</h1>
+
+<table>
+  <tr>
+    <th>Text</th>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+
+<% @sasses.each do |sass| %>
+  <tr>
+    <td><%=h sass.text %></td>
+    <td><%=h sass.name %></td>
+    <td><%=h sass.age %></td>
+    <td><%= link_to 'Show', sass %></td>
+    <td><%= link_to 'Edit', edit_sass_path(sass) %></td>
+    <td><%= link_to 'Destroy', sass, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New sass', new_sass_path %>
